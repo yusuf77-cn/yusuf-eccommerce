@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <h1>My E-commerce Site</h1>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img class="cart" src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+</div>
+    <h1>About Us</h1>
+    <p class="pa">Welcome to our e-commerce site! We are dedicated to providing the best products and customer service.
+    </p>
+    <p class="pa">Our mission is to offer a wide range of high-quality products at competitive prices, while ensuring a
+        seamless shopping experience for our customers.</p>
+    <p class="pa">Thank you for choosing us for your shopping needs. We look forward to serving you!</p>
+    <hr>
+    <div class="message">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or feedback, please feel free to reach out to us. We value your input and are here
+            to assist you.</p>
+        <p>Email: yusufbarau05@gmail.com</p>
+        <p>Phone: +234 816 979 0319</p>
+        <p>Address: 123 E-commerce St, Shopville, USA</p>
+
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 My E-commerce Site. All rights reserved.</p>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+
+        <!-- Toggle Button -->
+        <div class="chat-toggle" onclick="toggleChat()">
+            <i class="fas fa-robot"></i>
+        </div>
+
+        <!-- Chat Box -->
+        <div class="chat-box" id="chatBox">
+
+            <!-- Header -->
+            <div class="chat-header">
+
+                <div class="chat-header-info">
+                    <h3>Shop Assistant</h3>
+                    <span id="status">🟢 Online</span>
+                </div>
+
+                <div class="chat-controls">
+
+                    <button onclick="clearChat()">
+                        <i class="fas fa-trash"></i>
+                    </button>
+
+                    <button onclick="toggleChat()">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Messages -->
+            <div class="chat-messages" id="chatMessages">
+
+                <div class="bot-message">
+                    👋 Hello! Welcome to My E-commerce Site.
+                    <br><br>
+
+                    I can help you with:
+                    <br>
+                    • Products 🛍️
+                    <br>
+                    • Orders 📦
+                    <br>
+                    • Delivery 🚚
+                    <br>
+                    • Payments 💳
+                    <br>
+                    • Discounts 🔥
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+
+                <button onclick="quickReply('Show products')">
+                    Products
+                </button>
+
+                <button onclick="quickReply('Track order')">
+                    Track Order
+                </button>
+
+                <button onclick="quickReply('Delivery info')">
+                    Delivery
+                </button>
+
+                <button onclick="quickReply('Available discounts')">
+                    Discounts
+                </button>
+
+            </div>
+
+            <!-- Typing -->
+            <div class="typing" id="typing">
+                Assistant is typing...
+            </div>
+
+            <!-- Input -->
+            <div class="chat-input">
+
+                <input type="text" id="userInput" placeholder="Type your message...">
+
+                <button onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
