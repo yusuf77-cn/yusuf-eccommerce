@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <h1>My E-commerce Site</h1>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img class="cart" src="images/cart.png" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+</div>
+
+    <div class="main">
+        <h2>Our Products</h2>
+        <p>Explore our wide range of products and find the perfect items for you.</p>
+        <select name="category" id="category">
+            <option value="">All Categories</option>
+            <option value="clothing">Clothing</option>
+            <option value="footwear">Footwear</option>
+            <option value="accessories">Accessories</option>
+            <option value="electronics">Electronics</option>
+        </select>
+
+        <section>
+            <h3>Filter by Price</h3>
+            <input type="range" id="priceRange" name="priceRange" min="0" max="1000" step="10">
+            <span id="priceValue">$0 - $1000</span>
+        </section>
+        <div class="products">
+            <div class="product">
+                <img src="images/product-1.jpg" alt="Product 1" id="product-1">
+                <h3>Red Printed T-Shirt</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>$19.99</p>
+                <button class="add-cart"
+                    onclick="addProductToCart('Red Printed T-Shirt', '$19.99', 'images/product-1.jpg'), addCartClicked()">Add
+                    to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/product-2.jpg" alt="Product 2" id="product-2">
+                <h3>HRX Shoes</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>$29.99</p>
+                <button class="add-cart"
+                    onclick="addProductToCart('HRX Shoes', '$29.99', 'images/product-2.jpg'),addCartClicked()">Add to
+                    Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="images/product-3.jpg" alt="Product 3" id="product-3">
+                <h3>Arsh Trousers</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>$39.99</p>
+                <button class="add-cart"
+                    onclick="addProductToCart('Arsh Trousers', '$39.99', 'images/product-3.jpg'),addCartClicked()">Add
+                    to
+                    Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="images/product-4.jpg" alt="Product 4" id="product-4">
+                <h3>Blue T-Shirt</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>$49.99</p>
+                <button class="add-cart"
+                    onclick="addProductToCart('Blue T-Shirt', '$49.99', 'images/product-4.jpg'), addCartClicked()">Add
+                    to
+                    Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/product-5.jpg" alt="Product 5" id="product-5">
+                <h3>Arsh Sneakers</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>$59.99</p>
+                <button class="add-cart"
+                    onclick="addProductToCart('Arsh Sneakers', '$59.99', 'images/product-5.jpg'), addCartClicked()">Add
+                    to
+                    Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/product-6.jpg" alt="Product 6" id="product-6">
+                <h3>Black Puma T-shirt</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>$69.99</p>
+                <button class="add-cart"
+                    onclick="addProductToCart('Black Puma T-shirt', '$69.99', 'images/product-6.jpg'), addCartClicked()">Add
+                    to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/product-7.jpg" alt="Product 7" id="product-7">
+                <h3>HRX Socks</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>$79.99</p>
+                <button class="add-cart"
+                    onclick="addProductToCart('HRX Socks', '$79.99', 'images/product-7.jpg'), addCartClicked()">Add to
+                    Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/product-8.jpg" alt="Product 8" id="product-8">
+                <h3>Fussle Watch</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>$89.99</p>
+                <button class="add-cart"
+                    onclick="addProductToCart('Fussle Watch', '$89.99', 'images/product-8.jpg'), addCartClicked()">Add
+                    to
+                    Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/product-9.jpg" alt="Product 9" id="product-9">
+                <h3>Roadstar Watch</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star fa fa-star-half-alt"></i>
+                <p>$99.99</p>
+                <button class="add-cart"
+                    onclick="addProductToCart('Roadstar Watch', '$99.99', 'images/product-9.jpg'), addCartClicked()">Add
+                    to
+                    Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/product-10.jpg" alt="Product 10" id="product-10">
+                <h3>HRX Black Shoes</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>$109.99</p>
+                <button class="add-cart"
+                    onclick="addProductToCart('HRX Black Shoes', '$109.99', 'images/product-10.jpg'),addCartClicked() ">Add
+                    to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/product-11.jpg" alt="Product 11" id="product-11">
+                <h3>Arsh Running Shoes</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <p>$119.99</p>
+                <button class="add-cart" onclick="addProductToCart(), addCartClicked()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/product-12.jpg" alt="Product 12" id="product-12">
+                <h3>Black Nike Trousers</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star fa fa-star-half-alt"></i>
+
+                <p>$129.99</p>
+                <button class="add-cart"
+                    onclick="addProductToCart('Black Nike Trousers', '$129.99', 'images/product-12.jpg'), addCartClicked()">Add
+                    to Cart</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 My E-commerce Site. All rights reserved.</p>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+
+        <!-- Toggle Button -->
+        <div class="chat-toggle" onclick="toggleChat()">
+            <i class="fas fa-robot"></i>
+        </div>
+
+        <!-- Chat Box -->
+        <div class="chat-box" id="chatBox">
+
+            <!-- Header -->
+            <div class="chat-header">
+
+                <div class="chat-header-info">
+                    <h3>Shop Assistant</h3>
+                    <span id="status">🟢 Online</span>
+                </div>
+
+                <div class="chat-controls">
+
+                    <button onclick="clearChat()">
+                        <i class="fas fa-trash"></i>
+                    </button>
+
+                    <button onclick="toggleChat()">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Messages -->
+            <div class="chat-messages" id="chatMessages">
+
+                <div class="bot-message">
+                    👋 Hello! Welcome to My E-commerce Site.
+                    <br><br>
+
+                    I can help you with:
+                    <br>
+                    • Products 🛍️
+                    <br>
+                    • Orders 📦
+                    <br>
+                    • Delivery 🚚
+                    <br>
+                    • Payments 💳
+                    <br>
+                    • Discounts 🔥
+                </div>
+
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+
+                <button onclick="quickReply('Show products')">
+                    Products
+                </button>
+
+                <button onclick="quickReply('Track order')">
+                    Track Order
+                </button>
+
+                <button onclick="quickReply('Delivery info')">
+                    Delivery
+                </button>
+
+                <button onclick="quickReply('Available discounts')">
+                    Discounts
+                </button>
+
+            </div>
+
+            <!-- Typing -->
+            <div class="typing" id="typing">
+                Assistant is typing...
+            </div>
+
+            <!-- Input -->
+            <div class="chat-input">
+
+                <input type="text" id="userInput" placeholder="Type your message...">
+
+                <button onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
